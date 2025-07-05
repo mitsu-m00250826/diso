@@ -1,5 +1,4 @@
 #include "cumc.h"
-#include "cudualmc.h"
 #include <torch/extension.h>
 
 #define CHECK_CUDA(x) \
