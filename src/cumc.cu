@@ -1,6 +1,6 @@
 #include <cstdint>
 #include <cstdio>
-#include <cuda_runtime.h>
+//#include <cuda_runtime.h>
 
 #include <thrust/device_ptr.h>
 #include <thrust/scan.h>
