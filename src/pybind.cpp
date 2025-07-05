@@ -25,16 +25,6 @@ namespace cumc
   public:
     ~CUMC()
     {
-      cudaDeviceSynchronize();
-      cudaFree(mc.temp_storage);
-      cudaFree(mc.first_cell_used);
-      cudaFree(mc.used_to_first_mc_vert);
-      cudaFree(mc.used_to_first_mc_tri);
-      cudaFree(mc.used_cell_code);
-      cudaFree(mc.used_cell_index);
-      cudaFree(mc.verts_type);
-      cudaFree(mc.tris);
-      cudaFree(mc.verts);
     }
 
     std::tuple<torch::Tensor, torch::Tensor> forward(torch::Tensor grid,
@@ -217,17 +207,6 @@ namespace cudualmc
   public:
     ~CUDMC()
     {
-      cudaDeviceSynchronize();
-      cudaFree(dmc.temp_storage);
-      cudaFree(dmc.first_cell_used);
-      cudaFree(dmc.used_to_first_mc_vert);
-      cudaFree(dmc.used_to_first_mc_patch);
-      cudaFree(dmc.used_cell_code);
-      cudaFree(dmc.used_cell_index);
-      cudaFree(dmc.mc_vert_to_cell);
-      cudaFree(dmc.mc_vert_type);
-      cudaFree(dmc.quads);
-      cudaFree(dmc.verts);
     }
 
     std::tuple<torch::Tensor, torch::Tensor> forward(torch::Tensor grid,
